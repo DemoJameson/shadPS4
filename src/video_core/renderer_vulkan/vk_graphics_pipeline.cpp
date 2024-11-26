@@ -18,11 +18,6 @@ namespace Vulkan {
 
 using Shader::LogicalStage;
 
-static constexpr auto gp_stage_flags =
-    vk::ShaderStageFlagBits::eVertex | vk::ShaderStageFlagBits::eTessellationControl |
-    vk::ShaderStageFlagBits::eTessellationEvaluation | vk::ShaderStageFlagBits::eGeometry |
-    vk::ShaderStageFlagBits::eFragment;
-
 GraphicsPipeline::GraphicsPipeline(const Instance& instance_, Scheduler& scheduler_,
                                    DescriptorHeap& desc_heap_, const GraphicsPipelineKey& key_,
                                    vk::PipelineCache pipeline_cache,
