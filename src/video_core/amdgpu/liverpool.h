@@ -59,6 +59,8 @@ struct Liverpool {
     static constexpr u32 ConfigRegWordOffset = 0x2000;
     static constexpr u32 ShRegWordOffset = 0x2C00;
     static constexpr u32 NumRegs = 0xD000;
+    
+    std::thread::id GPUThreadID;
 
     using UserData = std::array<u32, NumShaderUserData>;
 
